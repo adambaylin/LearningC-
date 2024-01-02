@@ -31,4 +31,72 @@ Reference semantics đề cập đến việc truyền tham chiếu của biến
 Tham chiếu là một biến khác tên mà tham chiếu đến cùng một ô nhớ với biến gốc. </br> Bất kỳ thay đổi nào trong hàm đối với tham chiếu sẽ ảnh hưởng trực tiếp đến giá trị của biến gốc.</br>
 
 *Lựa chọn giữa value semantics và reference semantics phụ thuộc vào yêu cầu của chương trình và mong muốn của người lập trình.</br> 
-Sử dụng tham chiếu có thể giúp tránh việc sao chép không cần thiết và giúp thay đổi trực tiếp giá trị của biến gốc. * </br>
+Sử dụng tham chiếu có thể giúp tránh việc sao chép không cần thiết và giúp thay đổi trực tiếp giá trị của biến gốc.* </br>
+
+## Declaration and Initialization
+
+1. ### Universal initialization 
+Universal initialization trong C++ thường được gọi là "uniform initialization" hoặc "braced initialization".</br> 
+Nó là một cách thức khai báo và khởi tạo biến một cách đồng nhất sử dụng dấu ngoặc nhọn {}.</br>
+
+Có hai cách sử dụng uniform initialization:</br>
+
+#### Khai Báo và Khởi Tạo Biến:
+
+``` cpp
+#include <iostream>
+
+int main() {
+    // Uniform initialization
+    int x{10};
+    double y{3.14};
+    char ch{'A'};
+
+    std::cout << "x: " << x << std::endl;
+    std::cout << "y: " << y << std::endl;
+    std::cout << "ch: " << ch << std::endl;
+
+    return 0;
+}
+```
+
+#### Khai Báo và Khởi Tạo Mảng:
+
+``` cpp
+#include <iostream>
+
+int main() {
+    // Uniform initialization cho mảng
+    int numbers[]{1, 2, 3, 4, 5};
+
+    // In giá trị của mảng
+    for (int i = 0; i < 5; ++i) {
+        std::cout << "numbers[" << i << "]: " << numbers[i] << std::endl;
+    }
+
+    return 0;
+}
+```
+
+Universal initialization mang lại một số lợi ích, bao gồm:
++ Đồng nhất: Bạn có thể sử dụng cách này để khai báo và khởi tạo biến một cách đồng nhất cho mọi kiểu dữ liệu, </br>bao gồm cả mảng và các cấu trúc dữ liệu.
++ Chế độ cảnh báo (warning): Có thể bật chế độ cảnh báo khi có sự mơ hồ hoặc mâu thuẫn trong khai báo và khởi tạo.</br>
+
+*Tuy nhiên, cũng cần lưu ý rằng uniform initialization có thể gây nhầm lẫn trong một số tình huống,</br> đặc biệt là khi bạn có các kiểu dữ liệu có thể được chuyển đổi một cách không rõ ràng*</br>
+
+## class
+
++ Một lớp (class) là một cấu trúc dữ liệu phức tạp.</br>
++ Các lớp có thể có cả hàm thành viên và thành viên dữ liệu.</br>
+> + Chúng ta có thể chọn những hàm thành viên nào sẽ có, tên của chúng, </br>chức năng của chúng và khi nào chúng sẽ được gọi</br>
+> + Những quyết định này xác định hành vi của các đối tượng của lớp.</br>
+> + Chúng được gọi để thực hiện các hoạt động trên một đối tượng.</br>
++ Mặc định, quyền truy cập vào thành viên của lớp là "private" (riêng tư).</br>
+
+
+
+
+
+
+
+
